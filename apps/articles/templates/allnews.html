@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+  <h2>All News</h2>
+  <a href="{% url 'add_news' %}" class="btn btn-primary">Add News</a>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Publication Date</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for news in news_list %}
+        <tr>
+          <td>{{ news.title }}</td>
+          <td>{{ news.pub_date }}</td>
+          <td>{{ news.content }}</td>
+        </tr>
+      {% empty %}
+        <tr>
+          <td colspan="3">No news found.</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
+
+{% block styles %}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/getallnews.css' %}">
+{% endblock %}
+

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Add a News Item</h2>
+  <form method="post" action="{% url 'add_news' %}">
+    {% csrf_token %}
+    <label for="{{ form.title.id_for_label }}">Title:</label>
+    {{ form.title }}
+    <label for="{{ form.content.id_for_label }}">Content:</label>
+    {{ form.content }}
+    <button type="submit">Add News</button>
+  </form>
+{% endblock %}
+

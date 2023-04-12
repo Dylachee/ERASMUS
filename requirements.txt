@@ -1,0 +1,8 @@
+# framework
+django
+#admin panel
+django-ckeditor
+# to hide data
+python-decouple
+# postgresql driver
+psycopg2-binary
