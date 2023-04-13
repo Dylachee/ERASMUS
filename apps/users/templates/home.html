@@ -1,9 +1,10 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
+<div class="main-wrapper">
 <header>
   <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
-    
+  {% include 'sidebar.html' %}
     
     <div class="container">
       <nav class="navbar navbar-expand-lg navbar-dark">
@@ -42,20 +43,85 @@
       </nav>
     </div>
  </header>
- <div class="wrapper text-center d-flex align-items-center">
-  <div class="container">
-    <h1 class="mb-3">Сайт находится на стадии разработки<span class="dot">.</span></h1>
-    <p>Наши контакты</p>
-    <div class="icons">
-      <a href=""><i class="fa fa-twitter"></i></a>
-      <a href=""><i class="fa fa-youtube-play"></i></a>
-      <a href=""><i class="fa fa-paper-plane"></i></a>
+ <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+ 
+        <div class="example-2 card">
+          <div class="wrapper">
+            <div class="header">
+              <div class="date">
+                <span class="day">12</span>
+                <span class="month">Aug</span>
+                <span class="year">2016</span>
+              </div>
+            </div>
+            <div class="data">
+              <div class="content">
+                <span class="author">Jane Doe</span>
+                <h1 class="title"><a href="#">Stranger Things: The sound of the Upside Down</a></h1>
+                <p class="text">The antsy bingers of Netflix will eagerly anticipate the digital release of the Survive soundtrack, out today.</p>
+                <a href="#" class="button">Read more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+     
     </div>
+    <div class="carousel-item">
+      <div class="example-2 card">
+        <div class="wrapper">
+          <div class="header">
+            <div class="date">
+              <span class="day">12</span>
+              <span class="month">Aug</span>
+              <span class="year">2016</span>
+            </div>
+          </div>
+          <div class="data">
+            <div class="content">
+              <span class="author">Jane Doe</span>
+              <h1 class="title"><a href="#">Stranger Things: The sound of the Upside Down</a></h1>
+              <p class="text">The antsy bingers of Netflix will eagerly anticipate the digital release of the Survive soundtrack, out today.</p>
+              <a href="#" class="button">Read more</a>
+            </div>
+          </div>
+        </div>
+      </div>    </div>
+    <div class="carousel-item">
+      <div class="example-2 card">
+        <div class="wrapper">
+          <div class="header">
+            <div class="date">
+              <span class="day">12</span>
+              <span class="month">Aug</span>
+              <span class="year">2016</span>
+            </div>
+
+          </div>
+          <div class="data">
+            <div class="content">
+              <span class="author">Jane Doe</span>
+              <h1 class="title"><a href="#">Stranger Things: The sound of the Upside Down</a></h1>
+              <p class="text">The antsy bingers of Netflix will eagerly anticipate the digital release of the Survive soundtrack, out today.</p>
+              <a href="#" class="button">Read more</a>
+            </div>
+          </div>
+        </div>
+      </div>    </div>
   </div>
- </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
 <footer id="footer">
   <p>&copy; Something | <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a></p>
 </footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-{% endblock %}
 
+</div>
+{% endblock %}
